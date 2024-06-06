@@ -115,7 +115,7 @@ public class CalculationModel {
                 String right = this.numberFormBeginning(this.expression.substring(i + 1));
                 // division in java
                 if (Double.parseDouble(right) == 0)
-                    throw new ArithmeticException("Division by zero");
+                    throw new ArithmeticException("Can't divide by zero");
 
                 val = Double.parseDouble(left) / Double.parseDouble(right);
                 // remove left form cloneExp

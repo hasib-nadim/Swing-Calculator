@@ -171,6 +171,7 @@ public class CalcView extends JFrame implements ActionListener {
             try {
                 result = String.valueOf(CalculationModel.evaluate(text));
             } catch (ArithmeticException aex) {
+                JOptionPane.showMessageDialog(this, aex.getMessage(), "Warning", JOptionPane.WARNING_MESSAGE);
                 result = aex.getMessage();
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Invalid expression", "Error", JOptionPane.ERROR_MESSAGE);
